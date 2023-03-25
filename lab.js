@@ -183,7 +183,8 @@ console.log(user.name)
 //Code Here
 delete user.age
 
-console.log(user)
+
+
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
 /*
@@ -193,7 +194,17 @@ console.log(user)
 */
 
 //Code here
+class Cat {
+  constructor( name, age, color) {
+  this.name =  'stew'
+  this.age = 7
+  this.color = 'orange'
+  }
 
+}
+const pet = new Cat('stew', 7, 'orange')
+
+console.log(pet)
 
 
 //////////////////////////// PROBLEM 13 ////////////////////////////
@@ -205,7 +216,21 @@ console.log(user)
 */
 
 //Code here
+class Wizard {
+  constructor (name, age, favoriteSpell) {
+    this.name = 'Richard'
+    this.age = '35'
+    this.favoriteSpell = 'bippity boppity boop'
+  }
+  castCall() {
+    console.log(`${this.name} has cast ${this.favoriteSpell}`)
+  } 
+}
 
+const ron = new Wizard('ron',11,'eat slugs,malfoy')
+ron.CastCall()
+
+console.log(ron.castCall)
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
     Write a class called Phone. We'll use it as if we were creating
