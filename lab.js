@@ -216,21 +216,23 @@ console.log(pet)
 */
 
 //Code here
-class Wizard {
-  constructor (name, age, favoriteSpell) {
-    this.name = 'Richard'
-    this.age = '35'
-    this.favoriteSpell = 'bippity boppity boop'
-  }
-  castCall() {
-    console.log(`${this.name} has cast ${this.favoriteSpell}`)
-  } 
-}
+//class Wizard {
+ // constructor (name, age, favoriteSpell) {
+   // this.name = name
+   // this.age = age
+    //this.favoriteSpell = favoriteSpell
+ // }
+  //castSpell() {
+   // console.log(`${this.name} has cast ${this.favoriteSpell}`)
+// } 
+//}
 
-const ron = new Wizard('ron',11,'eat slugs,malfoy')
-ron.CastCall()
+//const harry = new Wizard('harry', 11, 'bippity boppoty boop')
 
-console.log(ron.castCall)
+//harry.CastSpell()
+
+
+//console.log(ron.castSpell)
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
     Write a class called Phone. We'll use it as if we were creating
@@ -255,8 +257,25 @@ console.log(ron.castCall)
 */
 
 //Code Here
+class Phone {
+  constructor (brand, model, storage, color, price, soldProperties) {
+    this.brand = brand
+    this.model = model
+    this.storage = storage
+    this.color = color
+    this.price = price
+    this.sold = false 
+  }
+  sell () {
+    this.sold = true
+    console.log(`${this.brand} ${this.model} has been sold.`)
+  }
+  changePrice(newPrice) {
+  this.price = newPrice
+  }
+}
 
-  
+
 /*
     Next make three new phone instances using your class.
     Send in values of your choice. They should match these data types:
@@ -268,7 +287,9 @@ console.log(ron.castCall)
 */
 
 //Code Here
-
+  let phoneOne = new Phone ('Samsung', 'galaxy', 120, 'grey', 1000)
+  let phoneTwo = new Phone ('Apple', 'iphone', 280, 'purple', 1500)
+  let phoneThree = new Phone ('google', 'pixel', 150, 'yellow', 780 )
 /* 
   Call the changePrice function on one of your phones, 
   don't forget to pass in a new price 
@@ -277,7 +298,8 @@ console.log(ron.castCall)
 */ 
 
 //Code Here 
-
+phoneOne.changePrice(800)
+console.log(phoneOne)
 
 /*
   Now call the sell method on one of your other phone objects
@@ -286,7 +308,8 @@ console.log(ron.castCall)
 */
 
 //Code Here 
-
+phoneThree.sell ()
+console.log(phoneThree)
 
 //////////////////////////// PROBLEM 15 ////////////////////////////
 
@@ -305,7 +328,7 @@ const colors = {
 //do not edit this object
 
 //Code Here 
-
+const colorsCopy = {...colors}
 
 
 /*
@@ -333,10 +356,10 @@ const shippingInfo = {
 //do not edit the objects above
 
 //Code Here
-
+const helensInfo = { ...contactInfo, ...shippingInfo }
 
 //Print helensInfo to see what it looks like, there should be no repeating properties.
-
+console.log(helensInfo)
 
 //////////////////////////// PROBLEM 16 ////////////////////////////
 
