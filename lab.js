@@ -374,13 +374,26 @@ console.log(helensInfo)
 */
 
 //Code Here 
-
+class Vehicle {
+  constructor(capacity, color, mileage) {
+    this.capacity = capacity
+    this.color = color
+    this. mileage = mileage
+  }
+  move(miles) {
+    this.mileage += miles
+    console.log(this.mileage)
+  }
+  
+}
 
 /*
   Create a vehicle using your new class and save it to a variable called myFirstVehicle
 */
 
 //Code Here
+const myFirstVehicle = new Vehicle(5, 'black', 150000)
+  console.log(myFirstVehicle)
 
 
 /* 
@@ -392,17 +405,23 @@ console.log(helensInfo)
 */
 
 //Code Here
-
+class Motorcycle extends Vehicle {
+  constructor (capacity, mileage, make, isCool) {
+    super(capacity, color, mileage)
+    this.make = make
+    this.isCool = isCool
+  }
+} 
 /*
   Create a Motorcycle using your new class and save it to a variable called myFirstMotorcycle
 */
 
 //Code Here 
-
+const myFirstMotorcycle = new Motorcycle(2, 100000, 'klm', true)
 /*
   Call the move function on myFirstMotorcycle (don't forget the parameter)
 */
-
+console.log(myFirstMotorcycle)
 /*
   Let's make another class based off of Vehicle. 
 
@@ -420,7 +439,9 @@ console.log(helensInfo)
 */
 
 //Code Here
-
+class Boat extends Vehicle {
+  
+}
 
 /*
   Create a new boat using your class. You can choose whatever values you like for all the 
